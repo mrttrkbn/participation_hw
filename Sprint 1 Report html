@@ -1,0 +1,365 @@
+<!DOCTYPE html>
+<!-- HTML5 Hello world by kirupa - http://www.kirupa.com/html5/getting_your_feet_wet_html5_pg1.htm -->
+<html lang="en-us">
+
+<head>
+<style>
+	table, th, td {
+    border: 1px solid black;
+    border-collapse: collapse;
+}
+</style>
+<title> Sprint 1 </title>
+</head>
+<body>
+<p style = "text-align: right"> Lesley (lesley.li@yale.edu) </p> 
+<p style = "text-align: right"> Mert (mert.turkben@yale.edu) </p>
+<p style = "text-align: right"> Mustasim (mustasim.azhar@yale.edu) </p>
+<p style = "text-align: right"> Paul  (paul.bashir@yale.edu) </p>
+<hr/>
+</p>
+<p style = "text-align : center">Crimson Silence Coders - Project Status Coders</p>
+<p style = "text-align : center"> November 1 </p>
+<h3 style = "font-weight: bold"> Burn Down Chart </h3>
+<img src = "Picture1.png" alt ="Burn Down Chart" width ="600"/>
+<br/>
+<h3 style = "font-weight: bold"> Sprint Completed Stories </h3>
+<ul type = "1">
+	<li> Homepage is reachable</li>
+	<li> Homepage has a title</li>
+	<li> Homepage has a header</li>
+	<li> Homepage has a footer</li>
+	<li> Homepage ahs a link to the about page in footer</li>
+	<li> Homepage has a link to the home page in footer</li>
+	<li> Homepage has your team logo</li>
+	<li> Homepage has a link to the new event page</li>
+	<li> Homepage has a list of events</li>
+	<li> Homepage each event links to a "detail" page</li>
+	<li> Homepage each event shows its time</li>
+	<li> Homepage has background image</li>
+	<li> Homepage header font size is bigger than body</li>
+</ul>
+	
+<h3 style = "font-weight: bold"> Stories initially planned Sprint 1 are moved to Sprint 2 </h3>	
+<ul type = "1" start ="14">
+	<li> Homepage title font size is bigger than header </li>
+	<li> Homepage uses bootstrap</li>
+	<li> Homepage has borders</li>
+	<li> Homepage search Bar</li>
+</ul>
+
+<h3 style = "font-weight: bold"> We defined the core aspects of the project as follows</h3>
+<ul>
+	<li> The entire project will be structured around 4 sprints</li>
+	<li> Sprints will be on a weekly basis (7 days) from Friday to Thursday</li>
+	<li> The team will meet on Thursday for a 1h sprint retrospective followed by 1h sprint planning</li>
+    <li> Trello will be used as main project management tool</li>
+    <li> Each week a different team member will be the scrum master</li>
+    <li> The scrum master is responsible for ensuring the progress in the dev team as well as preparing the weekly status reports</li>
+</ul>
+
+<h3 style =" font-weight: bold"> First sprint planning (Oct. 26)</h3>
+<ul>
+	<li> We analyzed the project and defined our stories based on the provided grading code</li>
+    <li> We ordered the stories by size and assigned respective amounts of story points</li>
+    <li> We allocated all stories to respective sprints to finalize the project outline (see Appendix)</li>
+    <li> We defined the core aspects of the project (see above)</li>
+    <li> We included all stories into our project management tool (Trello)</li>
+    <li> We invited Professor Jensen to our story board on Trello</li>
+</ul>
+
+<h3 style = "font-weight: bold"> Sprint (Oct.26 - Nov.1)</h3>
+<p> The first sprint was very challenging and it took us a while to get our application deployed on heroku. Once we had our code online and working, we started making all changes we planned for sprint 1. Visit our page at: <a href = "https://glacial-badlands-11667.herokuapp.com/"> https://glacial-badlands-11667.herokuapp.com/ </a></p>
+
+<p style = "text-decoration: underline"> Challenges:</p>
+<ul>
+	<li> Some aspects such as using bootstrap were too challenging for the first sprint (9/50 story points were unsolved), and we will definitely need support in office hours during sprint 2.</li>
+    <li> Our logo and our background image worked in the Cloud9 environment, but did not show up on heroku. That’s something we are currently trying to resolve.</li>
+</ul>
+
+<h3 style = "font-weight: bold"> Sprint Retrospective (Nov.1)</h3>
+<p style =" text-decoration: underline"> Product Backlog</p>
+<ul>
+	<li> Sprint 1:</li>
+	<ul>
+		<li> Homepage title font size is bigger than header</li>
+		<li> Homepage uses bootstrap</li>
+		<li> Homepage has borders</li>
+		<li> Homepage search Bar</li>
+	</ul>
+	<li> New Backlog for Sprint 2 → see Appendix</li>
+</ul>
+<p style =" text-decoration: underline"> Goals for next week</p>
+<ul>
+	<li> Finish 9 story points from sprint 1</li>
+	<li> Finish as much as possible of the 75 story points planned for sprint 2 </li>
+    <li> Resolve issues with images on heroku</li> 
+</ul>
+<br/>
+<br/>
+<h3 style = "font-weight: bold; text-decoration: underline" > Appendix</h3>
+<br/>
+<P style = "font-weight: bold"> Sprint 1</P>
+<table style="width:60%; border: 1px solid black; border-collapse: collapse">
+  <tr>
+    <th style = "text-align:left">Description</th>
+    <th>Story Points</th> 
+  </tr>
+  <tr>
+    <td style = "font-weight: bold">The homepage:</td>
+    <td style = "font-weight: bold; text-align: center">50</td> 
+  </tr>
+  <tr>
+    <td style ="color: red">is reachable</td>
+    <td style = "text-align: center; color:red">10</td> 
+  </tr>
+  <tr>
+    <td style ="color: red">has a title</td>
+    <td style = "text-align: center">1</td> 
+  </tr>
+  <tr>
+    <td>uses bootstrap</td>
+    <td style ="text-align: center">1</td> 
+  </tr>
+  <tr>
+    <td style = "color: red"> has a header</td>
+    <td style ="text-align: center; color: red">1</td> 
+  </tr>
+  <tr>
+    <td style ="color: red">has a footer</td>
+    <td style ="text-align: center; color: red">1</td> 
+  </tr>
+  <tr>
+    <td style ="color: red">has a link to the about page in footer</td>
+    <td style ="text-align: center; color: red">1</td> 
+  </tr>
+  <tr>
+    <td style ="color: red">has a link to the home page in footer</td>
+    <td style ="text-align: center; color: red">1</td> 
+  </tr>
+  <tr>
+    <td style ="color: red">has your team logo</td>
+    <td style ="text-align: center; color: red">3</td> 
+  </tr>
+  <tr>
+    <td style ="color: red">has a link to the new event page</td>
+    <td style ="text-align: center; color: red">4</td> 
+  </tr>
+  <tr>
+    <td style ="color: red">has a list of events</td>
+    <td style ="text-align: center; color: red">7</td> 
+  </tr>
+  <tr>
+    <td style ="color: red">each event links to a "detail" page</td>
+    <td style ="text-align: center; color: red">2</td> 
+  </tr>
+  <tr>
+    <td style ="color: red">each event shows its time</td>
+    <td style ="text-align: center; color: red">6</td> 
+  </tr>
+  <tr>
+    <td>Has borders</td>
+    <td style ="text-align: center">3</td> 
+  </tr>
+  <tr>
+    <td style ="color: red">Has background image</td>
+    <td style ="text-align: center; color: red">2</td> 
+  </tr>
+   <tr>
+    <td>Title font size is bigger than header</td>
+    <td style ="text-align: center">2</td> 
+  </tr>
+  <tr>
+    <td style ="color: red">Header font size is bigger than body</td>
+    <td style ="text-align: center; color: red">2</td> 
+  </tr>
+  <tr>
+    <td>Search Bar</td>
+    <td style ="text-align: center">3</td> 
+  </tr>
+</table>
+  <br/>
+  <br/>
+  <P style = "font-weight: bold"> Sprint 2</P>
+  <table style="width:60%; border: 1px solid black; border-collapse: collapse">
+  <tr>
+    <th style = "text-align:left">Description</th>
+    <th>Story Points</th> 
+  </tr>
+  <tr>
+    <td style = "font-weight: bold">About page:</td>
+    <td style = "font-weight: bold; text-align: center">15</td> 
+  </tr>
+  <tr>
+    <td>should be reachable</td>
+    <td style = "text-align: center">10</td> 
+  </tr>
+  <tr>
+    <td>has your names</td>
+    <td style = "text-align: center">1</td> 
+  </tr>
+  <tr>
+    <td>shows your headshots</td>
+    <td style = "text-align: center">4</td> 
+  </tr>
+  <tr>
+    <td style = "font-weight: bold">New event page:</td>
+    <td style = "font-weight: bold; text-align: center">60</td> 
+  </tr>
+  <tr>
+    <td>should be reachable</td>
+    <td style = "text-align: center">10</td> 
+  </tr>
+  <tr>
+    <td>has a form for event submission</td>
+    <td style = "text-align: center">4</td> 
+  </tr>
+  <tr>
+    <td>the form has a title input field with label</td>
+    <td style = "text-align: center">4</td> 
+  </tr>
+  <tr>
+    <td>the form has a image input field with label</td>
+    <td style = "text-align: center">4</td> 
+  </tr>
+  <tr>
+    <td>the form has a location text field with label</td>
+    <td style = "text-align: center">4</td> 
+  </tr>
+  <tr>
+    <td>the form has a dropdown field with label</td>
+    <td style = "text-align: center">4</td> 
+  </tr>
+  <tr>
+    <td>the form has a month dropdown field with label</td>
+    <td style = "text-align: center">4</td> 
+  </tr>
+  <tr>
+    <td>the form has a day dropdown field with label</td>
+    <td style = "text-align: center">4</td> 
+  </tr>
+  <tr>
+    <td>the form has a hour dropdown field with label</td>
+    <td style = "text-align: center">4</td> 
+  </tr>
+  <tr>
+    <td>the form has a minute dropdown field with label</td>
+    <td style = "text-align: center">4</td> 
+  </tr>
+  <tr>
+    <td>should not allow event with no title</td>
+    <td style = "text-align: center">2</td> 
+  </tr>
+</table>
+  <br/>
+  <br/>
+  <P style = "font-weight: bold"> Sprint 3</P>
+  <table style="width:60%; border: 1px solid black; border-collapse: collapse">
+  <tr>
+    <th style = "text-align:left">Description</th>
+    <th>Story Points</th> 
+  </tr>
+  <tr>
+    <td style = "font-weight: bold">Event 2 (randomly chosen):</td>
+    <td style = "font-weight: bold; text-align: center">45</td> 
+  </tr>
+  <tr>
+    <td>should be reachable</td>
+    <td style = "text-align: center">10</td> 
+  </tr>
+  <tr>
+    <td>uses bootstrap</td>
+    <td style = "text-align: center">1</td> 
+  </tr>
+  <tr>
+    <td>has a header</td>
+    <td style = "text-align: center">1</td> 
+  </tr>
+  <tr>
+    <td>has a footer</td>
+    <td style = "text-align: center">1</td> 
+  </tr>
+  <tr>
+    <td>has a link to the about page in footer</td>
+    <td style = "text-align: center">1</td> 
+  </tr>
+  <tr>
+    <td>has a link to the home page in footer</td>
+    <td style = "text-align: center">1</td> 
+  </tr>
+  <tr>
+    <td>has a title</td>
+    <td style = "text-align: center">1</td> 
+  </tr>
+  <tr>
+    <td>has a date</td>
+    <td style = "text-align: center">1</td> 
+  </tr>
+  <tr>
+    <td>has a location</td>
+    <td style = "text-align: center">1</td> 
+  </tr>
+  <tr>
+    <td>has an image</td>
+    <td style = "text-align: center">1</td> 
+  </tr>
+  <tr>
+    <td>has a list of attendees</td>
+    <td style = "text-align: center">5</td> 
+  </tr>
+  <tr>
+    <td>has a form to RSVP</td>
+    <td style = "text-align: center">10</td> 
+  </tr>
+  <tr>
+    <td>should not allow RSVP with invalid email</td>
+    <td style = "text-align: center">3</td> 
+  </tr>
+  <tr>
+    <td>should not allow RSVP with non-yale email</td>
+    <td style = "text-align: center">3</td> 
+  </tr>
+  <tr>
+    <td>should allow RSVP with normal yale email</td>
+    <td style = "text-align: center">3</td> 
+  </tr>
+  <tr>
+    <td>should allow RSVP with scrambled yale email</td>
+    <td style = "text-align: center">3</td> 
+  </tr>
+  <tr>
+    <td>should allow RSVP with another scrambled yale email</td>
+    <td style = "text-align: center">3</td> 
+  </tr>
+  <tr>
+    <td>has a link to donate</td>
+    <td style = "text-align: center">6</td> 
+  </tr>
+  <tr>
+    <td style =" font-weight: bold">API</td>
+    <td style = "text-align: center; font-weight:bold">15</td> 
+  </tr>
+  <tr>
+    <td>should return valid JSON</td>
+    <td style = "text-align: center">10</td> 
+  </tr>
+  <tr>
+    <td>should be searchable</td>
+    <td style = "text-align: center">5</td> 
+  </tr>
+</table>
+  <br/>
+  <br/>
+  <P style = "font-weight: bold"> Sprint 4</P>
+  <table style="width:60%; border: 1px solid black; border-collapse: collapse">
+  <tr>
+    <th style = "text-align:left">Description</th>
+    <th>Story Points</th> 
+  </tr>
+  <tr>
+    <td>CSS (To be defined)</td>
+    <td style = "text-align: center">50</td> 
+  </tr>
+</table>
+</body>
+</html>
