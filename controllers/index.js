@@ -9,6 +9,15 @@ function index(request, response) {
     response.render('index', contextData);
 }
 
+function about(request, response) {
+    const people = [
+        {name: 'paul', picture: 'PAUL.jpeg'},
+        {name: 'Mert', picture: 'Mert.jpeg'},
+        {name: 'Lesley', picture: 'LESLEY.jpg'},
+        {name: 'Mac', picture: 'Mac.jpeg'},
+    ];
+    response.render('about', {people:people});
+}
 module.exports = {
-    index,
+    index, about
 };

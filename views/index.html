@@ -1,19 +1,33 @@
 {% extends "layout.html" %}
 
 {% block body %}
-<p>
-    This is the body of the index.
-</p>
-<p>
-    {{salutation}}
-</p>
-<div class="cat-holder">
-    <input type="button" value="Next cat" id="next-cat">
-    <img src="/static/img/cat0.jpg" alt="Cat zero">
-    <img src="/static/img/cat1.jpg" alt="Cat one">
-    <img src="/static/img/cat2.jpg" alt="Cat two">
-    <img src="/static/img/cat3.jpg" alt="Cat three">
-</div>
+    <main>
+        <h1>Eventopedia.com</h1>
+        <h2>Welcome to the unlimited universe of exiting SOM events!</h2>
+    <ul>
+      
+      <li class="event" id="event-0">
+        <a href="/events/0" id="title">Mac's Rave Party</a>
+        <br />
+        <time>9/19/18 23:30</time>
+      </li>
+      
+      <li class="event" id="event-1">
+        <a href="/events/1" id="title">Meet Lesley</a>
+        <br />
+        <time>10/31/18 4:00</time>
+      </li>
+      
+      <li class="event" id="event-2">
+        <a href="/events/2" id="title">Cook with Mert</a>
+        <br />
+        <time>12/25/18 20:30</time>
+      </li>
+
+    </ul>
+    <a href='/events/new' id='new'>Create an event</a>
+
+    </main>
 {% endblock %}
 
 {% block late_loading_js %}
