@@ -33,4 +33,5 @@ app.use('/static', express.static('static'));
 app.get('/', indexControllers.index);
 app.get('/about', indexControllers.about);
 app.get('/newevent', indexControllers.newevent);
+app.get('/events/2', indexControllers.event2);
 module.exports = app;

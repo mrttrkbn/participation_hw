@@ -20,7 +20,12 @@ function newevent(request, response) {
     };
     response.render('newevent', contextData);
 }
+function event(request, response) {
+    const contextData = {
+    };
+    response.render('event2', contextData);
+}
 
 module.exports = {
-    index, about, newevent
+    index, about, newevent, event
 };
