@@ -15,12 +15,6 @@ function about(request, response) {
     ];
     response.render('about', {people:people});
 }
-function newevent(request, response) {
-    const contextData = {
-    };
-    response.render('newevent', contextData);
-}
-
 module.exports = {
-    index, about, newevent
+    index, about
 };
