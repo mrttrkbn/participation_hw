@@ -1,3 +1,5 @@
+const eventsModel = require('../models/events');
+
 // Create a function which is a "controller", it
 // handles a request, writing the response.
 function index(request, response) {
@@ -20,6 +22,13 @@ function newevent(request, response) {
     };
     response.render('newevent', contextData);
 }
+
+function events(request, response) {
+  const event = eventsModel.getById(Number(request.params.id));
+  console.log(event);
+  response.render('event' , { event: event });
+}
+
 module.exports = {
-    index, about, newevent
+    index, about, newevent, events
 };
