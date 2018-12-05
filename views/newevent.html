@@ -13,12 +13,19 @@
   <h1>Create Your Event!</h1>
 
   <main>
-    
-<ul class="form-errors">
-    
-</ul>
+ 
+ 
+{% if errors %}   
+    <ul class="form-errors">
+        {% for error in errors %}
+        <li>
+            {{error}}
+        </li>
+        {% endfor %}
+    </ul>
+{% endif %}
 
-<form action="/events/new" method="post">
+<form action="/newevent" method="post">
     <label for="title">Title</label><br>
     <input name="title" type="text"/>
     <br />
