@@ -3,7 +3,7 @@
 {% block body %}
     <h1 style = "text-align : center;font-weight:bold">ABOUT US</h1>
     <br/>
-    {% for about in person %}
+    {% for person in people %}
         <h2 style = "font-weight: bold; text-decoration: underline">{{person.name}} </h2>
         <img src = "/static/img/{{person.picture}}" width ="300"/>
         <br/>

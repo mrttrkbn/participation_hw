@@ -9,13 +9,13 @@ function index(request, response) {
 }
 
 function about(request, response) {
-    const person = [
-        { name: 'paul', picture: 'paul.jpeg' },
-        { name: 'mert', picture: 'mert.jpeg' },
-        { name: 'lesley', picture: 'lesley.jpg' },
-        { name: 'mac', picture: 'mac.jpeg' },
+    const people = [
+        { name: 'Paul', picture: 'paul.jpeg' },
+        { name: 'Mert', picture: 'mert.jpeg' },
+        { name: 'Lesley', picture: 'lesley.jpg' },
+        { name: 'Mac', picture: 'mac.jpeg' },
     ];
-    response.render('about', { person: person() });
+    response.render('about',{people:people});
 }
 
 function newevent(request, response) {
