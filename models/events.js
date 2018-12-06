@@ -54,7 +54,18 @@ function getById(id) {
     return null;
 }
 
+function getMaxId(id) {
+    let maxID = null;
+    for (let i = 0; i < allEvents.length; i += 1) {
+        if (!maxID || allEvents[i].id > maxID) {
+            maxID = allEvents[i];
+        }
+    }
+    return maxID;
+}
+
 module.exports = {
     all: allEvents,
     getById,
+    getMaxId,
 };

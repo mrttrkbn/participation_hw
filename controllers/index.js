@@ -32,6 +32,7 @@ function newevent(request, response) {
         console.log('This is a post request');
         console.log(request.body);
         const errors = [];
+        /*
         const theEvent = request.body;
         theEvent.id = eventsModel.getMaxId() + 1;
         if (!theEvent.title || theEvent.title.length > 50) {
@@ -41,8 +42,9 @@ function newevent(request, response) {
         if (errors.length === 0) {
             console.log('The new event is', theEvent);
             eventsModel.all.push(theEvent);
-            return response.redirect('/events/' + theEvent.id);
+            return response.redirect('/events/' + eventsModel.getMaxId() + 1);
         }
+        */
         contextData.errors = errors;
     } else {
         console.log('This is a get request');
