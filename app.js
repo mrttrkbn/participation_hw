@@ -32,7 +32,7 @@ app.use('/static', express.static('static'));
 // Now, attach our "controllers" to our "routes".
 app.get('/', indexControllers.index);
 app.get('/about', indexControllers.about);
-app.get('/newevent', indexControllers.newevent);
+app.get('/createanevent', indexControllers.Createanevent);
 app.post('/newevent', indexControllers.newevent);
 app.get('/events/:id', indexControllers.events);
 module.exports = app;
