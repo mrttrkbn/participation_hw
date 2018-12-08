@@ -6,38 +6,30 @@
 const allEvents = [
     {
         id: 0,
-        title: 'SOM House Party',
+        title: 'Mac\'s Rave Party',
         // Note that JavaScript months are zero-indexed,
         // so, month zero is January. This is Jan 17th
         // 2018 at 4:30pm local time.
-        date: new Date(2018, 0, 17, 16, 30, 0),
-        image: 'http://i.imgur.com/pXjrQ.gif',
-        location: 'Kyle \'s house',
-        attending: ['kyle.jensen@yale.edu', 'kim.kardashian@yale.edu'],
+        date: new Date(2016, 0, 17, 16, 30, 0),
+        image: '/static/img/rave.gif',
+        location: 'SOM',
+        attending: ['paul.bashir@yale.edu', 'clark.kent@yale.edu'],
     },
     {
         id: 1,
-        title: 'BBQ party for hackers and nerds',
+        title: 'Meet Lesley',
         date: new Date(2017, 8, 1, 19, 0, 0),
-        image: 'http://i.imgur.com/7pe2k.gif',
-        location: 'Sharon Oster\'s house',
-        attending: ['kyle.jensen@yale.edu', 'kim.kardashian@yale.edu'],
+        image: '/static/img/meet.png',
+        location: 'Lesley\'s house',
+        attending: ['mert.turkben@yale.edu', 'kim.kardashian@yale.edu'],
     },
     {
         id: 2,
-        title: 'BBQ for managers',
+        title: 'Cook with Mert',
         date: new Date(2017, 12, 20, 18, 0, 0),
-        image: 'http://i.imgur.com/CJLrRqh.gif',
-        location: 'Barry Nalebuff\'s house',
-        attending: ['kim.kardashian@yale.edu'],
-    },
-    {
-        id: 4,
-        title: 'Cooking lessons for the busy business student',
-        date: new Date(2018, 3, 2, 19, 0, 0),
-        image: 'http://i.imgur.com/02KT9.gif',
-        location: 'Yale Farm',
-        attending: ['homer.simpson@yale.edu'],
+        image: '/static/img/duck.gif',
+        location: 'Charlie\'s place',
+        attending: ['donald.duck@yale.edu'],
     },
 ];
 

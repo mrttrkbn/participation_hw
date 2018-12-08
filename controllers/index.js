@@ -3,9 +3,8 @@ const eventsModel = require('../models/events');
 // Create a function which is a "controller", it
 // handles a request, writing the response.
 function index(request, response) {
-    const contextData = {
-    };
-    response.render('index', contextData);
+    const contextData = eventsModel.all;
+    response.render('index', { contextData: contextData });
 }
 
 function Createanevent(request, response) {
@@ -21,7 +20,7 @@ function about(request, response) {
         { name: 'Lesley', picture: 'lesley.jpg' },
         { name: 'Mac', picture: 'mac.jpeg' },
     ];
-    response.render('about',{people:people});
+    response.render('about', { people: people() });
 }
 
 function newevent(request, response) {
@@ -30,9 +29,7 @@ function newevent(request, response) {
     };
     if (request.method === 'POST') {
         console.log('This is a post request');
-        console.log(request.body);
         const errors = [];
-        /*
         const theEvent = request.body;
         theEvent.id = eventsModel.getMaxId() + 1;
         if (!theEvent.title || theEvent.title.length > 50) {
@@ -40,11 +37,11 @@ function newevent(request, response) {
         }
         // TEST OTHER THINGS!!!
         if (errors.length === 0) {
-            console.log('The new event is', theEvent);
+            const tempID = eventsModel.all.length;
+            theEvent.id = tempID;
             eventsModel.all.push(theEvent);
-            return response.redirect('/events/' + eventsModel.getMaxId() + 1);
+            return response.redirect('/events/' + tempID);
         }
-        */
         contextData.errors = errors;
     } else {
         console.log('This is a get request');
@@ -55,9 +52,22 @@ function newevent(request, response) {
 function events(request, response) {
     const event = eventsModel.getById(Number(request.params.id));
     console.log(event);
-    response.render('event', {event: event});
+    response.render('event', { event: event });
 }
 
+function donate(request, response) {
+    const contextData = {
+    };
+    response.render('donate', contextData);
+}
+
+function neweventperson(request, response) {
+    const theEvent = request.body;
+    const event = eventsModel.getById(Number(request.params.id));
+    console.log('theEvent', event);
+    event.email = theEvent.email;
+    return response.render('event', { event: event });
+}
 module.exports = {
-    index, about, newevent, events, Createanevent,
+    index, about, newevent, events, Createanevent, donate, neweventperson,
 };

@@ -9,5 +9,18 @@
     
      {{event.attendıng}}
 
-
+     <div>
+         "want to contribute ?" <a href='/donate' id='donate'>Donate</a> "now"
+     </div>
+     <div>
+        Attendees:
+        <ul class='list-group' id ='attendees' style="list-style: none;">
+               <li>{{event.email}}</li>
+        </ul>
+     </div>
+     
+     <form action="/neweventperson/{{event.id}}" method="post">
+              <input type='email' id='email' name='email'>
+              <button type='submit' class='btn' name='submit'>Submit</button>
+    </form>
 {% endblock %}

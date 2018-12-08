@@ -1,6 +1,7 @@
 'use strict';
 
 const express = require('express');
+const bodyParser = require('body-parser');
 
 // Configure our "templating engine", which is
 // Mozilla's "Nunjucks" in this case.
@@ -24,6 +25,10 @@ nunjucks.configure('views', {
 });
 app.set('view engine', 'html');
 
+app.use(bodyParser.urlencoded({ extended: false }));
+app.use(bodyParser.json());
+
+
 // Configure our app to serve "static" assets,
 // like client-side images, js, and css out of
 // a directory called "static".
@@ -35,4 +40,6 @@ app.get('/about', indexControllers.about);
 app.get('/createanevent', indexControllers.Createanevent);
 app.post('/newevent', indexControllers.newevent);
 app.get('/events/:id', indexControllers.events);
+app.get('/donate', indexControllers.donate);
+app.post('/neweventperson/:id', indexControllers.neweventperson);
 module.exports = app;
