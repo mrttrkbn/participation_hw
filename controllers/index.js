@@ -38,7 +38,7 @@ function newevent(request, response) {
         if (!theEvent.location || theEvent.location.length > 50) {
             errors.push('This is a bad location');
         }
-        if (!theEvent.image || !theEvent.image.endsWith('.jpg') || !theEvent.image.endsWith('.png') || !theEvent.image.endsWith('.jpeg') || !theEvent.image.endsWith('.gif')) {
+        if (!theEvent.image || !theEvent.image.endsWith('.jpg'||'.png'||'.gif')) {
             errors.push('This is a bad image');
         }
         if (errors.length === 0) {
