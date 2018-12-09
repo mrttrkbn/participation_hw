@@ -20,7 +20,7 @@ function about(request, response) {
         { name: 'Lesley', picture: 'lesley.jpg' },
         { name: 'Mac', picture: 'mac.jpeg' },
     ];
-    response.render('about', { people: people() });
+    response.render('about', { people: people });
 }
 
 function newevent(request, response) {
@@ -35,10 +35,17 @@ function newevent(request, response) {
         if (!theEvent.title || theEvent.title.length > 50) {
             errors.push('This is a bad title');
         }
-        // TEST OTHER THINGS!!!
+        if (!theEvent.location || theEvent.location.length > 50) {
+            errors.push('This is a bad location');
+        }
+        if (!theEvent.image || !theEvent.image.endsWith('.jpg') || !theEvent.image.endsWith('.png') || !theEvent.image.endsWith('.jpeg') || !theEvent.image.endsWith('.gif')) {
+            errors.push('This is a bad image');
+        }
         if (errors.length === 0) {
             const tempID = eventsModel.all.length;
             theEvent.id = tempID;
+            theEvent.attending = [];
+            theEvent.date = new Date(theEvent.year, theEvent.month, theEvent.day, theEvent.hour, theEvent.minute, 0);
             eventsModel.all.push(theEvent);
             return response.redirect('/events/' + tempID);
         }
@@ -46,7 +53,7 @@ function newevent(request, response) {
     } else {
         console.log('This is a get request');
     }
-    return response.render('newevent', contextData);
+    return response.render('Createanevent', contextData);
 }
 
 function events(request, response) {
