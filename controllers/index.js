@@ -7,10 +7,10 @@ function index(request, response) {
     response.render('index', { contextData: contextData });
 }
 
-function Createanevent(request, response) {
+function neweventperson(request, response) {
     const contextData = {
     };
-    response.render('Createanevent', contextData);
+    response.render('neweventperson', contextData);
 }
 
 function about(request, response) {
@@ -53,7 +53,7 @@ function newevent(request, response) {
     } else {
         console.log('This is a get request');
     }
-    return response.render('Createanevent', contextData);
+    return response.render('neweventperson', contextData);
 }
 
 function events(request, response) {
@@ -68,7 +68,7 @@ function donate(request, response) {
     response.render('donate', contextData);
 }
 
-function neweventperson(request, response) {
+function neweventemail(request, response) {
     const theEvent = request.body;
     const event = eventsModel.getById(Number(request.params.id));
     console.log('theEvent', event);
@@ -76,7 +76,7 @@ function neweventperson(request, response) {
     return response.render('event', { event: event });
 }
 module.exports = {
-    index, about, newevent, events, Createanevent, donate, neweventperson,
+    index, about, newevent, events, neweventperson, donate, neweventemail,
 };
 
 //check if string ends with any of array suffixes
