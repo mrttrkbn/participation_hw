@@ -38,7 +38,7 @@ function newevent(request, response) {
         if (!theEvent.location || theEvent.location.length > 50) {
             errors.push('This is a bad location');
         }
-        if (!theEvent.image || !theEvent.image.endsWith('.jpg' || '.png' || '.gif')) {
+        if (!theEvent.image || !endsWithAny(['.jpg', '.png', '.gif'], theEvent.image)) {
             errors.push('This is a bad image');
         }
         if (errors.length === 0) {
@@ -78,3 +78,12 @@ function neweventperson(request, response) {
 module.exports = {
     index, about, newevent, events, Createanevent, donate, neweventperson,
 };
+
+//check if string ends with any of array suffixes
+function endsWithAny(suffixes, string) {
+    for (let suffix of suffixes) {
+        if(string.endsWith(suffix))
+            return true;
+    }
+    return false;
+}
