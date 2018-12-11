@@ -38,6 +38,7 @@ app.use('/static', express.static('static'));
 app.get('/', indexControllers.index);
 app.get('/about', indexControllers.about);
 app.get('/events/new', indexControllers.neweventperson);
+app.post('/events/:id', indexControllers.addattendee);
 app.post('/events/new', indexControllers.newevent);
 app.get('/events/:id', indexControllers.events);
 app.get('/donate', indexControllers.donate);

@@ -81,13 +81,41 @@ function donate(request, response) {
     response.render('donate', contextData);
 }
 
-function neweventemail(request, response) {
+function hashing(inputemail) {
+    const crypto = require('crypto');
+    const email = inputemail.toLowerCase();
+    const teamNickname = 'crimson-scilence';
+    const cc = crypto.createHash('sha256')
+        .update(`${email}-${teamNickname}`)
+        .digest('hex')
+        .substring(0, 7);
+    console.log(cc);
+    return (cc);
+}
+
+// add attendee to event
+function addattendee(request, response) {
+    const contextData = {
+        errors: [],
+    };
+    const errors = [];
     const theEvent = request.body;
     const event = eventsModel.getById(Number(request.params.id));
+    const eventemail = theEvent.email;
+    if (!theEvent.email || !eventemail.endsWith('@yale.edu')) {
+        errors.push('This is a bad email');
+    }
     console.log('theEvent', event);
-    event.email = theEvent.email;
-    return response.render('event', { event });
+    if (errors.length === 0) {
+        const confCode = hashing(theEvent.email);
+        contextData.confCode = confCode;
+        event.attending.push(theEvent.email);
+        return response.render('event', contextData);
+    }
+    contextData.errors = errors;
+    return response.render('event', contextData);
 }
+
 module.exports = {
-    index, about, newevent, events, neweventperson, donate, neweventemail,
+    index, about, newevent, events, neweventperson, donate, addattendee,
 };

@@ -23,7 +23,25 @@
         </ul>
      </div>
      
-     <form action="/neweventperson/{{event.id}}" method="post">
+     {% if errors %}   
+    <ul class="form-errors">
+        {% for error in errors %}
+        <li>
+            {{error}}
+        </li>
+        {% endfor %}
+    </ul>
+{% endif %}
+
+{% if confCode %}
+    <ul class="confCode">
+        <li>
+            {{confCode}}
+        </li>
+    </ul>
+{% endif %}
+
+     <form action="" method="post">
               <input type='email' id='email' name='email'>
               <button type='submit' class='btn' name='submit'>Submit</button>
     </form>
