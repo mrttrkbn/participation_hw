@@ -1,10 +1,22 @@
 const eventsModel = require('../models/events');
 
+
+// check if string ends with any of array suffixes
+function endsWithAny(suffixes, string) {
+    for (let i = suffixes.length; i--; i >= 0) {
+        if (string.endsWith(suffixes[i])) {
+            return true;
+        }
+    }
+
+    return false;
+}
+
 // Create a function which is a "controller", it
 // handles a request, writing the response.
 function index(request, response) {
     const contextData = eventsModel.all;
-    response.render('index', { contextData: contextData });
+    response.render('index', { contextData });
 }
 
 function neweventperson(request, response) {
@@ -20,7 +32,7 @@ function about(request, response) {
         { name: 'Lesley', picture: 'lesley.jpg' },
         { name: 'Mac', picture: 'mac.jpeg' },
     ];
-    response.render('about', { people: people });
+    response.render('about', { people });
 }
 
 function newevent(request, response) {
@@ -45,9 +57,10 @@ function newevent(request, response) {
             const tempID = eventsModel.all.length;
             theEvent.id = tempID;
             theEvent.attending = [];
-            theEvent.date = new Date(theEvent.year, theEvent.month, theEvent.day, theEvent.hour, theEvent.minute, 0);
+            theEvent.date = new Date(theEvent.year, theEvent.month,
+                theEvent.day, theEvent.hour, theEvent.minute, 0);
             eventsModel.all.push(theEvent);
-            return response.redirect('/events/' + tempID);
+            return response.redirect(`/events/${tempID}`);
         }
         contextData.errors = errors;
     } else {
@@ -59,7 +72,7 @@ function newevent(request, response) {
 function events(request, response) {
     const event = eventsModel.getById(Number(request.params.id));
     console.log(event);
-    response.render('event', { event: event });
+    response.render('event', { event });
 }
 
 function donate(request, response) {
@@ -73,17 +86,8 @@ function neweventemail(request, response) {
     const event = eventsModel.getById(Number(request.params.id));
     console.log('theEvent', event);
     event.email = theEvent.email;
-    return response.render('event', { event: event });
+    return response.render('event', { event });
 }
 module.exports = {
     index, about, newevent, events, neweventperson, donate, neweventemail,
 };
-
-//check if string ends with any of array suffixes
-function endsWithAny(suffixes, string) {
-    for (let suffix of suffixes) {
-        if(string.endsWith(suffix))
-            return true;
-    }
-    return false;
-}

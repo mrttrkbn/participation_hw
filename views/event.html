@@ -3,18 +3,19 @@
 {% block body %}
     <h1 style = "text-align : center;font-weight:bold">Event Page</h1>
     <br/>
-    {{event.title}}
+    <h1 id="title">{{event.title}}</h1>
     <br/>
-    {{event.image}}
+    <img src="{{event.image}}" alt="event image" id="image" />
     <br/>
-    Date: {{event.date}}
+    <span id="date">Date: {{event.date}}</span>
     <br/>
-    Location: {{event.location}}
+    <span id="location">Location: {{event.location}}</span>
      <br/>
-    Attendees: {{event.attending}}
+    Attendees: 
+    <ul class="list-group" id="attendees">{{event.attending}}</ul>
      <br/>
      <div>
-         Want to contribute? <a href='/donate' id='donate'>Donate</a> now
+         Want to contribute? <a href='/donate' id='donate'>Donate</a> now!
      </div>
      <div>
         <ul class='list-group' id ='attendees' style="list-style: none;">
