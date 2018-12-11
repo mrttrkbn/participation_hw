@@ -11,18 +11,19 @@
     <br/>
     <span id="location">Location: {{event.location}}</span>
      <br/>
-    Attendees: 
-    <ul class="list-group" id="attendees">{{event.attending}}</ul>
+    Attendees:
+    <ul id="attendees">
+
+    {% for attendee in event.attending %}
+      <li>{{attendee}}</li>
+    {% endfor %}
+    
+    </ul>
      <br/>
      <div>
          Want to contribute? <a href='/donate' id='donate'>Donate</a> now!
      </div>
-     <div>
-        <ul class='list-group' id ='attendees' style="list-style: none;">
-               <li>{{event.email}}</li>
-        </ul>
-     </div>
-     
+    
      {% if errors %}   
     <ul class="form-errors">
         {% for error in errors %}
@@ -41,7 +42,7 @@
     </ul>
 {% endif %}
 
-     <form action="" method="post">
+     <form action={{'/events/'+event.id}} method="post">
               <input type='email' id='email' name='email'>
               <button type='submit' class='btn' name='submit'>Submit</button>
     </form>

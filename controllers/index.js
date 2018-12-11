@@ -99,9 +99,10 @@ function addattendee(request, response) {
         errors: [],
     };
     const errors = [];
+    const id = Number(request.params.id);
     const theEvent = request.body;
     const event = eventsModel.getById(Number(request.params.id));
-    const eventemail = theEvent.email;
+    const eventemail = theEvent.email.toLowerCase();
     if (!theEvent.email || !eventemail.endsWith('@yale.edu')) {
         errors.push('This is a bad email');
     }
@@ -109,11 +110,15 @@ function addattendee(request, response) {
     if (errors.length === 0) {
         const confCode = hashing(theEvent.email);
         contextData.confCode = confCode;
-        event.attending.push(theEvent.email);
-        return response.render('event', contextData);
+        event.attending.push(theEvent.email.toLowerCase());
+        
+        //response.redirect('/events/'+id);
+
+        
     }
     contextData.errors = errors;
-    return response.render('event', contextData);
+    contextData.event = event;
+    response.render('event', contextData);
 }
 
 module.exports = {
