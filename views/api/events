@@ -1,0 +1,22 @@
+
+The JSON.stringify() method converts a JavaScript object or value to a JSON string, 
+optionally replacing values if a replacer function is specified or optionally including 
+only the specified properties if a replacer array is specified
+
+    {events:
+        [
+            {
+                id: 0,
+                title: 'Hello world',
+                location: 'New Haven',
+                attendees: [
+                    'jacob.bendicksen@yale.edu',
+                ],
+                image: 'http://yaleherald.com/wp-content/uploads/2013/02/Screen-Shot-2013-02-27-at-11.51.10-AM.png',
+                time: '9/19/17 23:30'
+            },
+            <more events here, maybe>...
+        ]
+    }
+    
+    

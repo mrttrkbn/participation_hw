@@ -111,10 +111,6 @@ function addattendee(request, response) {
         const confCode = hashing(theEvent.email);
         contextData.confCode = confCode;
         event.attending.push(theEvent.email.toLowerCase());
-        
-        //response.redirect('/events/'+id);
-
-        
     }
     contextData.errors = errors;
     contextData.event = event;
