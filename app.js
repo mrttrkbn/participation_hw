@@ -44,3 +44,15 @@ app.get('/events/:id(\\d+)', indexControllers.events);
 app.get('/donate', indexControllers.donate);
 app.post('/neweventperson/:id', indexControllers.neweventperson);
 module.exports = app;
+
+const crypto = require('crypto');
+
+const email = ''.toLowerCase();
+const teamNickname = 'crimson-silence';
+const cc = crypto.createHash('sha256')
+    .update(`${email}-${teamNickname}`)
+    .digest('hex')
+    .substring(0, 7);
+console.log(cc);
+
+
