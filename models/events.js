@@ -56,8 +56,28 @@ function getMaxId(id) {
     return maxID;
 }
 
+function getAllEvents(ctx) {
+    let listOfEvents = [];
+    for (let i = 0; i < allEvents.length; i += 1) {
+        listOfEvents.push(allEvents[i]);
+    }
+    return listOfEvents;
+}
+
+function getByTitle(ctx, search) {
+    let listOfEvents = [];
+    for (let i = 0; i < allEvents.length; i += 1) {
+        if (allEvents[i].name.includes(search)) {
+            listOfEvents.push(allEvents[i]);
+        }
+    }
+    return listOfEvents;
+}
+
 module.exports = {
     all: allEvents,
     getById,
     getMaxId,
+    getAllEvents,
+    getByTitle,
 };
