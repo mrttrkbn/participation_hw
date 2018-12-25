@@ -11,7 +11,28 @@ function about(request, response) {
     };
     response.render('about', contextData);
 }
+function newyorkalbum(request, response) {
+    const contextData = {
+    };
+    response.render('newyorkalbum', contextData);
+}
+function yalesomalbum(request, response) {
+    const contextData = {
+    };
+    response.render('yalesomalbum', contextData);
+}
+function concertalbum(request, response) {
+    const contextData = {
+    };
+    response.render('concertalbum', contextData);
+}
+function libraryalbum(request, response) {
+    const contextData = {
+    };
+    response.render('libraryalbum', contextData);
+}
+
 
 module.exports = {
-    index, about
+    index, about, newyorkalbum, yalesomalbum, concertalbum, libraryalbum,
 };

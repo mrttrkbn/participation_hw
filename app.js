@@ -37,6 +37,10 @@ app.use('/static', express.static('static'));
 // Now, attach our "controllers" to our "routes".
 app.get('/', indexControllers.index);
 app.get('/about', indexControllers.about);
+app.get('/newyorkalbum', indexControllers.newyorkalbum);
+app.get('/concertalbum', indexControllers.concertalbum);
+app.get('/yalesomalbum', indexControllers.yalesomalbum);
+app.get('/libraryalbum', indexControllers.libraryalbum);
 module.exports = app;
 
 const crypto = require('crypto');

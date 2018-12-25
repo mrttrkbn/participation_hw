@@ -52,6 +52,17 @@
              width: 25%;
              height: 300px; 
         }
+        article5 {
+             float: left;
+             width: 50%;
+             height: 300px; 
+        }
+        article6 {
+             float: left;
+             width: 50%;
+             height: 300px; 
+        }
+
         footer {
              padding: 10px;
              text-align: center;
@@ -68,14 +79,23 @@
     <nav>
 
       <a href="/about">About</a>
-    
+      <a href="/">Home</a>    
+      
     </nav>
     <div>
         {% block body %}
         {% endblock %}
     </div>
     <footer>
-        This is the body of the index. See <a href="/attendees">attendees</a>.
+        <p>Subscribe to my blog</p>
+        <input type='email' id='email' name='email'>
+        <button type="button" onclick="submit()">Submit</button>
+        <p id="submit"></p>
+        <script>
+        function submit() { 
+            document.getElementById("submit").innerHTML = "Thank you for subscribing";
+        }
+        </script>
     </footer>
 </body>
 
