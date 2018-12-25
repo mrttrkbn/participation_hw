@@ -2,10 +2,16 @@
 // handles a request, writing the response.
 function index(request, response) {
     response.render('index', {
-        title: 'Hello Yale SOM hackers',
+        title: 'Welcome to my blog',
     });
 }
 
+function about(request, response) {
+    const contextData = {
+    };
+    response.render('about', contextData);
+}
+
 module.exports = {
-    index,
+    index, about
 };
