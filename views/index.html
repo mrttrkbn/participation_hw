@@ -1,21 +1,22 @@
 {% extends "layout.html" %}
 
 {% block body %}
-    <main>
-        
-        <h1>Eventopedia.com</h1>
-        <h2>Welcome to the unlimited universe of exiting SOM events!</h2>
-   <ul>
-      {% for person in contextData %}
-          <li class="event" id="event-{{person.id}}">
-            <a href="/events/{{person.id}}" id="title">{{person.title}}</a>
-            <br />
-            <time>{{person.date}}</time>
-          </li> 
-      {% endfor %}
-    </ul>
-   
-    <a href='/events/new' id='new'>Create an event</a>
-   
-    </main>
+
+  <article1>
+    <h1>New York</h1>
+    <p><img src="images/newyork.jpg" width="256" height="200"></p>
+  </article1>
+  <article2>
+    <h1>Yale SOM</h1>
+    <p><img src="images/yalesom.jpg" width="256" height="200"></p>
+  </article2>
+  <article3>
+    <h1>Yale Philharmonia Concert</h1>
+    <p><img src="images/concert.jpg" width="256" height="200"></p>
+  </article3>
+  <article4>
+    <h1>Sterling Library</h1>
+    <p><img src="images/library.jpg" width="256" height="200"></p>
+  </article4>
+
 {% endblock %}
